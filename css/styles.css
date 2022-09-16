@@ -4,7 +4,7 @@
 :root {
     /* Colors */
         /* Primary */
-        --Soft-blue: hsl(215, 51%, 70%);
+        --Soft-blue: #92a9c9;
         --Cyan: hsl(178, 100%, 50%);
         /* Neutral */
         --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
@@ -35,51 +35,178 @@
 
 html {
     font-size: 62.5%;
+    font-family: var(--Outfit);
 }
 
 body {
+    align-items: center;
     background-color: var(--Very-dark-blue-main-BG);
-    min-height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
 }
 
+
+/* Block */
 .card {
+    background-color: var(--Very-dark-blue-card-BG);
     color: var(--White);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    max-height: 545px;
+    max-width: 330px;
     padding: 2.4rem;
-    background-color: var(--Very-dark-blue-card-BG);
+    width: 100%;
+    border-radius: 10px;
+    margin: 5rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        max-width: 350px;
+        max-height: 595px;
+    }
+}
+
+
+
+
+/* Images */
+.card__main-image {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2.8rem;
+}
+
+.card__heading {
+    font-size: 2rem;
+    color: var(--White);
+    margin-bottom: 1.6rem;
+    cursor: pointer;
+}
+
+.card__heading:hover {
+    color: var(--Cyan);
+}
+
+.card__description {
+    font-size: 1.5rem;
+    color: var(--Soft-blue);
+    line-height: 1.5;
+    margin-bottom: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .card__heading {
+        margin-bottom: 2.2rem;
+    }
 }
 
 
 
 
 
+/* Card Auction Info */
+.card__info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+    padding-bottom: 1.5rem;
+}
+.card__price {
+    width: 100%;
+    display: flex;
+}
+
+.card__eth-img {
+    height: 20px;
+}
+
+.card__eth {
+    margin-left: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--Cyan);
+    font-weight: var(--SemiBold);
+    position: relative;
+    top: 3px;
+}
+
+
+.card__time {
+    width: 100%;
+    text-align: right;
+}
+
+.card__time-left {
+    font-size: 1.4rem;
+    color: var(--Soft-blue);
+    position: relative;
+    bottom: 0.3rem;
+    margin-left: 0.2rem;
+}
+
+.card__clock-img {
+    min-height: 1.4rem;
+}
+
+@media screen and (min-width:1024px) {
+    .card__info {
+        padding-bottom: 2.4rem;
+    }
+}
 
 
 
 
+/* Card Creator Section */
+.card__creator {
+    display: flex;
+    margin-top: 1.6rem;
+}
+
+.card__artist {
+    max-height: 3rem;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+.card__attribute {
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--Soft-blue);
+    position: relative;
+    top: 0.5rem;
+}
+
+.card__attribute > span {
+    color: var(--White);
+    cursor: pointer;
+}
+
+.card__attribute > span:hover {
+    color: var(--Cyan);
+}
+
+@media screen and (min-width: 1024px) {
+    .card__creator {
+        margin-bottom: 0.6rem;
+    }
+}
 
 
-
-
-
-
-
-
-
-
-
+/* Attribution */
 .attribution {
+    position: absolute;
+    bottom: 0;
     font-size: 11px;
     text-align: center;
+    color: var(--White);
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--Cyan);
 }
