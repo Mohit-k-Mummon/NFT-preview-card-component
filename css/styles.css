@@ -16,9 +16,9 @@
         /* Family */
         --Outfit: 'Outfit', sans-serif;
         /* Weights */
-        --light: '300';
-        --regular: '400';
-        --SemiBold: '600';
+        --light: 300;
+        --regular: 400;
+        --SemiBold: 600;
 }
 
 
@@ -141,6 +141,10 @@ body {
     .card__heading {
         margin-bottom: 2.2rem;
     }
+
+    .card__description {
+        font-size: 1.8rem;
+    }
 }
 
 
@@ -161,16 +165,17 @@ body {
 }
 
 .card__eth-img {
-    height: 20px;
+    height: 18px;
 }
 
 .card__eth {
     color: var(--Cyan);
     font-size: 1.4rem;
     font-weight: var(--SemiBold);
-    margin-left: 0.5rem;
+    margin-left: 0.8rem;
     position: relative;
-    top: 3px;
+    top: 2px;
+    letter-spacing: 1px;
 }
 
 
@@ -217,7 +222,7 @@ body {
     font-size: 1.5rem;
     margin-left: 1.5rem;
     position: relative;
-    top: 0.5rem;
+    top: 0.6rem;
 }
 
 .card__attribute > span {
